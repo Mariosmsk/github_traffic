@@ -6,9 +6,11 @@ This code can be used to run one time of day or every 14 days to collect the tra
 
 Python requirements:  
 pip install githubpy
+
 pip install pathlib
 
 traffic.csv:
+```
 #Date, Visitors, Views
 2019-07-04T00:00:00Z, 7, 15
 2019-07-05T00:00:00Z, 13, 93
@@ -25,7 +27,11 @@ traffic.csv:
 2019-07-16T00:00:00Z, 10, 242
 2019-07-17T00:00:00Z, 15, 314
 2019-07-18T00:00:00Z, 15, 248
+```
 
 totals.csv:
+
+```
 Total visitors: 162
 Total views: 2192
+```
