@@ -5,6 +5,7 @@
 
 import github
 import pathlib
+from datetime import date
 
 repo = 'repo'
 org = 'organization/user'
@@ -35,6 +36,8 @@ if 'before_data' in globals():
     for data in before_data:
         if '#' in data or data == '':
             continue
+        if str(date.today()) in data:
+            continue
         line = data.split(', ')
         unique_visits.append(int(line[1]))
         views_counts.append(int(line[2]))
@@ -46,7 +49,8 @@ for view_per_day in views_14_days['views']:
     if 'before_data' in globals():
         if view_per_day['timestamp'] in check:
             continue
-
+        if str(date.today()) in view_per_day['timestamp']:
+            continue
     unique_visits.append(view_per_day['uniques'])
     views_counts.append(view_per_day['count'])
 
